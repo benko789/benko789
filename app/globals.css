@@ -8,8 +8,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --font-sans: var(--font-geist-sans); */
+  --font-sans: var(--font-roboto-sans);
+  /* --font-mono: var(--font-geist-mono); */
+  /* --font-mono: var(--font-roboto-mono); */
+  --font-mono: var(--font-source-code-pro);
+  /* --text-20xl: 233px;
+  --text-30xl: 365px; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +28,21 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
 }

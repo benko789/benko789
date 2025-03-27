@@ -3,102 +3,67 @@ import Image from "next/image";
 export default function Home() {
   // This is a workaround to get the base path for the images with Template Literals
   var basePath = process.env.NODE_ENV === 'production' ? '/benko789' : '';
+  
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src={`${basePath}/next.svg`}
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen flex flex-col">
+      {/* Scrolling Banner */}
+      <div className="bg-black text-white py-2 overflow-hidden whitespace-nowrap">
+        <div className="animate-scroll inline-block">
+          <span className="mx-4">Welcome to my portfolio • Full Stack Developer • UI/UX Designer • Problem Solver • Welcome to my portfolio • Full Stack Developer • UI/UX Designer • Problem Solver •</span>
+        </div>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src={`${basePath}/vercel.svg`}
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Main Content */}
+      <main className="flex-1 flex items-center justify-center p-2">
+        <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-3xl">
+          <div className="text-left space-y-0 w-full max-w-[25rem]">
+            <h1 className="text-[12rem] font-mono font-bold leading-[0.8] pl-1.5">BEN</h1>
+            <h1 className="text-[17.25rem] font-mono font-bold leading-[0.8]">KO</h1>
+          </div>
+          <div className="text-left space-y-2 ml-3 w-full max-w-[23.5rem]">
+            {/* Vertical List of Numbers and Descriptions */}
+            <div className="flex items-start">
+              <span className="text-8xl font-mono font-bold mr-4">3</span>
+              <p className="text-2xl pt-1 text-pretty">Projects Completed fdsafsfsdfsdasdasa<br></br>
+              </p>
+            </div>
+            <div className="flex items-start">
+              <span className="text-8xl font-mono font-bold mr-4">5</span>
+              <p className="text-2xl pt-1 text-pretty">Happy Clients fdsasdasad dsafdsa asd sad</p>
+            </div>
+            <div className="flex items-start">
+              <span className="text-8xl font-mono font-bold mr-4">7</span>
+              <p className="text-2xl pt-1 text-pretty">Years of Experience fdsasds fdwsa sd asd</p>
+            </div>
+
+            {/* Horizontal List of Contact Buttons */}
+            <div className="flex gap-4 mt-8">
+              <a
+                href="mailto:your-email@example.com"
+                className="px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors"
+              >
+                Email
+              </a>
+              <a
+                href="https://www.linkedin.com/in/your-profile"
+                className="px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/your-profile"
+                className="px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src={`${basePath}/file.svg`} 
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src={`${basePath}/window.svg`}
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src={`${basePath}/globe.svg`}
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="bg-gray-100 py-4 text-center text-sm text-gray-600">
+        <p>© 2024 Ben Ko. All rights reserved.</p>
       </footer>
     </div>
   );
