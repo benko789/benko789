@@ -46,19 +46,23 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
-}
-
-.animate-scroll {
-  animation: scroll 10s linear infinite;
-  display: inline-flex;
-  /* Make sure the content is duplicated to create seamless loop */
-  gap: 0;
 }
 
 .scroll-container {
   overflow: hidden;
+  position: relative;
   width: 100%;
-  display: flex;
+}
+
+.animate-scroll {
+  animation: scroll 5s linear infinite; /* Adjust time as needed */
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+/* To ensure smooth looping, we need the content to be at least 2x the width */
+.animate-scroll > span {
+  flex-shrink: 0;
 }

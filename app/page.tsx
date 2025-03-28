@@ -6,24 +6,37 @@ export default function Home() {
   var basePath = process.env.NODE_ENV === 'production' ? '/benko789' : '';
   
   const bannerText = "Welcome to my portfolio • Full Stack Developer • UI/UX Designer • Problem Solver •";
-  const repeatCount = 2; // Adjust this number based on your needs
+  const repeatCount = 4; // Increased repeat count to ensure coverage of wider screens
   
   const generateBannerSpans = () => {
-    return Array(repeatCount).fill(null).map((_, index) => (
-      <span key={index} className="mx-4">{bannerText}</span>
+    // Create two sets of spans to ensure smooth infinite loop
+    const spans = Array(repeatCount).fill(null).map((_, index) => (
+      <div className="animate-scroll inline-block">
+        <span key={index} className="mx-4">{bannerText}</span>
+      </div>
     ));
+    
+    return (
+      <>
+        {spans}
+      </>
+    );
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <ThemeToggle />
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-center p-2">
-        {/* Scrolling Banner - Move outside of max-w-3xl container */}
-        <div className="w-full bg-black text-white py-2 scroll-container mb-8 whitespace-nowrap">
-          <div className="animate-scroll inline-block">
+      <main className="flex-1 flex flex-col items-center justify-center">
+        {/* Scrolling Banner */}
+        <div className="w-full bg-black dark:bg-white text-white dark:text-black py-2 scroll-container mb-8 inline-flex flex-nowrap">
+          {generateBannerSpans()}
+          {/* <div className="animate-scroll inline-block">
             {generateBannerSpans()}
-          </div>
+          </div> */}
+          {/* <div className="animate-scroll inline-block">
+            {generateBannerSpans()}
+          </div> */}
         </div>
 
         {/* Content Container */}
