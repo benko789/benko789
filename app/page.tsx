@@ -10,15 +10,15 @@ export default function Home() {
   
   const generateBannerSpans = () => {
     // Create two sets of spans to ensure smooth infinite loop
-    const spans = Array(repeatCount).fill(null).map((_, index) => (
-      <div className="animate-scroll inline-block">
-        <span key={index} className="mx-4">{bannerText}</span>
+    const divs = Array(repeatCount).fill(null).map((_, index) => (
+      <div key={index} className="animate-scroll inline-block">
+        <span className="mx-4">{bannerText}</span>
       </div>
     ));
     
     return (
       <>
-        {spans}
+        {divs}
       </>
     );
   };
@@ -31,12 +31,6 @@ export default function Home() {
         {/* Scrolling Banner */}
         <div className="w-full bg-black dark:bg-white text-white dark:text-black py-2 scroll-container mb-8 inline-flex flex-nowrap">
           {generateBannerSpans()}
-          {/* <div className="animate-scroll inline-block">
-            {generateBannerSpans()}
-          </div> */}
-          {/* <div className="animate-scroll inline-block">
-            {generateBannerSpans()}
-          </div> */}
         </div>
 
         {/* Content Container */}
