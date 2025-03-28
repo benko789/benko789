@@ -54,7 +54,7 @@ export default function Home() {
               ))}
 
               {/* Horizontal List of Contact Buttons */}
-              <div className="flex flex-row gap-4 mt-2">
+              <div className="flex flex-row gap-4 mt-2 md:mt-5 md:mb-5">
                 <a
                   href="mailto:benkokaiser@hotmail.com"
                   className="px-4 py-2 border border-black dark:border-white rounded-full hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
