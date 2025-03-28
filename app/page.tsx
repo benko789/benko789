@@ -6,7 +6,7 @@ export default function Home() {
   var basePath = process.env.NODE_ENV === 'production' ? '/benko789' : '';
   
   const bannerText = "Welcome to my portfolio • Full Stack Developer • UI/UX Designer • Problem Solver •";
-  const repeatCount = 4; // Adjust this number based on your needs
+  const repeatCount = 2; // Adjust this number based on your needs
   
   const generateBannerSpans = () => {
     return Array(repeatCount).fill(null).map((_, index) => (

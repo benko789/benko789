@@ -1,15 +1,18 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root[class="dark"] {
+:root[class="light"] {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-:root[class="light"] {
+:root[class="dark"] {
   --background: #0a0a0a;
   --foreground: #ededed;
 }
