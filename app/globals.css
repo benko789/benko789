@@ -37,9 +37,9 @@ body {
 }
 
 /* Add smooth transitions for all theme-related changes */
-*, *::before, *::after {
+/* *, *::before, *::after {
   transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
+} */
 
 @keyframes scroll {
   0% {
@@ -66,3 +66,48 @@ body {
 .animate-scroll > span {
   flex-shrink: 0;
 }
+
+/* .text-gradient-mask {
+  background: var(--foreground);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-mask.active {
+  background: linear-gradient(0deg, rgba(255, 0, 0, 1), rgba(0, 0, 255, 1));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+} */
+
+.text-gradient-mask {
+  color: var(--foreground);
+  background: url(https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_1280.png);
+  background-clip: text;
+}
+
+.text-gradient-mask {
+  color: var(--foreground);
+  transition: all 0.5s ease-in-out;
+}
+
+/* .text-gradient-mask::after {
+  color: transparent;
+  background: url(https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_1280.png);
+  background-clip: text;
+} */
+
+.text-gradient-mask.active {
+  color: transparent;
+  background: url(https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_1280.png);
+  background-clip: text;
+}
+
+/* .text-gradient-mask.active::after {
+  color: var(--foreground);
+  background: url(https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_1280.png);
+  background-clip: text;
+} */

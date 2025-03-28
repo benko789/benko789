@@ -1,7 +1,13 @@
+'use client';
+
+import { useState } from 'react';
 import Image from "next/image";
 import { ThemeToggle } from "../components/ThemeToggle";
+import { GradientMaskButton } from "../components/GradientMaskButton";
 
 export default function Home() {
+  const [isHolding, setIsHolding] = useState(false);
+
   // This is a workaround to get the base path for the images with Template Literals
   var basePath = process.env.NODE_ENV === 'production' ? '/benko789' : '';
   
@@ -26,6 +32,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <ThemeToggle />
+      <GradientMaskButton isHolding={isHolding} onHoldChange={setIsHolding} />
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-top md:justify-center">
         {/* Scrolling Banner */}
@@ -36,9 +43,9 @@ export default function Home() {
         {/* Content Container */}
         <div className="w-full max-w-3xl">
           <div className="flex flex-col md:flex-row items-center justify-between w-full">
-            <div className="text-center md:text-left space-y-0 w-full max-w-[25rem]">
-              <h1 className="text-[11rem] md:text-[12rem] font-mono font-bold leading-[0.8] pl-1.5">BEN</h1>
-              <h1 className="text-[15.8rem] md:text-[17.25rem] font-mono font-bold leading-[0.8]">KO</h1>
+            <div className="text-center md:text-left space-y-0 w-full max-w-[26rem]">
+              <h1 className={`text-[11rem] md:text-[12rem] font-mono font-bold leading-[0.8] pl-1.5 ${isHolding ? 'text-gradient-mask active' : 'text-gradient-mask'}`}>BEN</h1>
+              <h1 className={`text-[15.8rem] md:text-[17.25rem] font-mono font-bold leading-[0.8] ${isHolding ? 'text-gradient-mask active' : 'text-gradient-mask'}`}>KO</h1>
             </div>
             <div className="text-left md:space-y-2 ml-7 md:ml-3 w-full max-w-[23.5rem]">
               {/* Vertical List of Numbers and Descriptions */}
