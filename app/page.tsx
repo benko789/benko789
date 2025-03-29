@@ -46,7 +46,6 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <ShaderBackground />
       <ThemeToggle />
-      {/* <GradientMaskButton isHolding={isHolding} onHoldChange={setIsHolding} /> */}
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-top md:justify-center solid-bg">
         {/* Scrolling Banner */}
@@ -78,8 +77,8 @@ export default function Home() {
                 { number: 7, description: "Years of Experience" }
               ].map((highlight, index) => (
                 <div key={index} className="flex items-start">
-                  <span className="text-8xl font-mono font-bold">{highlight.number}</span>
-                  <p className="text-2xl pl-2 md:pl-1 pt-1 text-pretty">{highlight.description}</p>
+                  <span className="text-7xl md:text-8xl font-mono font-bold">{highlight.number}</span>
+                  <p className="text-xl md:text-2xl pl-5 md:pl-1 pt-1 text-pretty">{highlight.description}</p>
                 </div>
               ))}
 
@@ -111,7 +110,7 @@ export default function Home() {
       {/* <ThemeToggle /> */}
       {/* Footer */}
       {/* <footer className="bg-gray-100 py-4 text-center text-sm text-gray-600">
-        <p>© 2024 Ben Ko. All rights reserved.</p>
+        <p>© 2025 Ben Ko. All rights reserved.</p>
       </footer> */}
     </div>
   );

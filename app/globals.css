@@ -25,8 +25,6 @@
   /* --font-mono: var(--font-geist-mono); */
   /* --font-mono: var(--font-roboto-mono); */
   --font-mono: var(--font-source-code-pro);
-  /* --text-20xl: 233px;
-  --text-30xl: 365px; */
 }
 
 body {
@@ -47,7 +45,7 @@ body {
   transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 } */
 
-/* Add this to your globals.css or a relevant CSS file */
+/* Gradient Mask Button Responsive Size*/
 @media (max-width: 768px) { /* Medium size or lower */
   .gradient-mask-button {
     width: 11rem; /* Smaller width */
@@ -88,21 +86,6 @@ body {
   flex-shrink: 0;
 }
 
-/* .text-gradient-mask {
-  background: var(--foreground);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-mask.active {
-  background: linear-gradient(0deg, rgba(255, 0, 0, 1), rgba(0, 0, 255, 1));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-} */
 
 .text-gradient-mask {
   color: var(--foreground);
@@ -126,13 +109,3 @@ body {
   background-position: center;
   background-clip: text;
 }
-
-/* .text-gradient-mask.active::after {
-  color: var(--foreground);
-  background: url(https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_1280.png);
-  background-clip: text;
-} */
-
-/* Add this to your globals.css or a relevant CSS file */
-
-/* Remove the hidden-background class as we're using the shader canvas now */
