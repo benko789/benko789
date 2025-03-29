@@ -48,8 +48,8 @@ body {
 /* Gradient Mask Button Responsive Size*/
 @media (max-width: 768px) { /* Medium size or lower */
   .gradient-mask-button {
-    width: 11rem; /* Smaller width */
-    height: 12rem; /* Smaller height */
+    width: 10.2rem; /* Smaller width */
+    height: 11.5rem; /* Smaller height */
   }
 }
 
