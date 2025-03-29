@@ -46,7 +46,7 @@ export default function Home() {
       <ThemeToggle />
       {/* <GradientMaskButton isHolding={isHolding} onHoldChange={setIsHolding} /> */}
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-top md:justify-center">
+      <main className="flex-1 flex flex-col items-center justify-top md:justify-center solid-bg">
         {/* Scrolling Banner */}
         <div className="w-full bg-black dark:bg-white text-white dark:text-black py-2 scroll-container mb-6 inline-flex flex-nowrap max-w-3xl">
           {generateBannerSpans()}
