@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from "next/image";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { GradientMaskButton } from "../components/GradientMaskButton";
+import { ShaderBackground } from "../components/ShaderBackground";
 
 export default function Home() {
   const [isHolding, setIsHolding] = useState(false);
@@ -43,6 +44,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <ShaderBackground />
       <ThemeToggle />
       {/* <GradientMaskButton isHolding={isHolding} onHoldChange={setIsHolding} /> */}
       {/* Main Content */}
