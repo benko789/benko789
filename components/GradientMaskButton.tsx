@@ -23,7 +23,7 @@ export function GradientMaskButton({ isHolding, onHoldChange, className, style }
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp} // Ensure it stops if the mouse leaves the button
-      className={`p-0 rounded-full bg-blue-500 text-white transition-colors duration-200 ${className}`}
+      className={`p-0 rounded-full bg-blue-500 text-white transition-colors duration-200 gradient-mask-button ${className}`}
       style={style}
       aria-label="Hold to change gradient"
     >

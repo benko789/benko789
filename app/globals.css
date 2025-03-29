@@ -41,6 +41,21 @@ body {
   transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 } */
 
+/* Add this to your globals.css or a relevant CSS file */
+@media (max-width: 768px) { /* Medium size or lower */
+  .gradient-mask-button {
+    width: 11rem; /* Smaller width */
+    height: 12rem; /* Smaller height */
+  }
+}
+
+@media (min-width: 769px) { /* Medium size and above */
+  .gradient-mask-button {
+    width: 12rem; /* Original width */
+    height: 13rem; /* Original height */
+  }
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -87,11 +102,13 @@ body {
   color: var(--foreground);
   background: url(https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_1280.png);
   background-clip: text;
+  transition: all 0.5s ease-in-out;
+
 }
 
-.text-gradient-mask {
+.text-gradient-mask::after {
   color: var(--foreground);
-  transition: all 0.5s ease-in-out;
+  /* transition: all 0.5s ease-in-out; */
 }
 
 /* .text-gradient-mask::after {
