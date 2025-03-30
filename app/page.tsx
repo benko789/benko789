@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { GradientMaskButton } from "../components/GradientMaskButton";
 import { ShaderBackground } from "../components/ShaderBackground";
+import { ShaderBackgroundShaderPark } from "../components/ShaderBackgroundShaderPark";
 
 export default function Home() {
   const [isHolding, setIsHolding] = useState(false);
@@ -43,8 +44,9 @@ export default function Home() {
   }, [isHolding]);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <ShaderBackground />
+    <div className="md:min-h-screen flex flex-col">
+      {/* <ShaderBackground /> */}
+      <ShaderBackgroundShaderPark />
       <ThemeToggle />
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-top md:justify-center solid-bg">

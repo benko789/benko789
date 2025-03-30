@@ -112,8 +112,7 @@ export const ShaderBackground = () => {
     <canvas
       ref={canvasRef}
     //   className="fixed top-0 left-0 size-full -z-10"
-      className="fixed top-1/2 left-1/2 -z-10"
-      style={{ opacity: 1 }}
+      className="fixed top-1/2 left-1/2 -z-10 shader-background"
     />
   );
 }; 

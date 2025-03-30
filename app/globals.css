@@ -35,15 +35,15 @@ body {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.solid-bg{
+/* .solid-bg{
   background-color: var(--background);
   color: var(--foreground);
-}
+} */
 
 /* Add smooth transitions for all theme-related changes */
-/* *, *::before, *::after {
+*, *::before, *::after {
   transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-} */
+}
 
 /* Gradient Mask Button Responsive Size*/
 @media (max-width: 768px) { /* Medium size or lower */
@@ -108,4 +108,13 @@ body {
   background-size: cover;
   background-position: center;
   background-clip: text;
+}
+
+.shader-background {
+  opacity: 0;
+  /* transition: none; */
+}
+
+.shader-background::after {
+  opacity: 1;
 }
