@@ -47,6 +47,8 @@ export default function Home() {
     <div className="md:min-h-screen flex flex-col">
       {/* <ShaderBackground /> */}
       <ShaderBackgroundShaderPark />
+      {/* <canvas className="my-canvas"></canvas>
+      <script src="../test.js" type="module"></script> */}
       <ThemeToggle />
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-top md:justify-center solid-bg">

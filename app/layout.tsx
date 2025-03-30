@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
+import { Source_Code_Pro } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,6 +22,11 @@ const robotoSans = Roboto({
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
+  subsets: ["latin"],
+});
+
+const sourceCodePro = Source_Code_Pro({
+  variable: "--font-source-code-pro",
   subsets: ["latin"],
 });
 
