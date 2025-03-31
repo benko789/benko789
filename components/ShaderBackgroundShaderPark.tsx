@@ -41,7 +41,7 @@ export const ShaderBackgroundShaderPark = () => {
         // Debugging: Check if the shader program is created and linked correctly
         console.log("Shader Program:", gl.CURRENT_PROGRAM);
         // This converts your Shader Park code into a shader and renders it to the my-canvas element
-        if (hasLoadedBefore.current) {
+        if (hasLoadedBefore.current && process.env.NODE_ENV != 'production') {
             // console.log("Shader Program:", gl.CURRENT_PROGRAM);
             hasLoadedBefore.current = false;
         } else {
