@@ -46,12 +46,15 @@ export default function Home() {
   return (
     <div className="md:min-h-screen flex flex-col">
       {/* <ShaderBackground /> */}
-      <ShaderBackgroundShaderPark />
+      {/* <ShaderBackgroundShaderPark /> */}
       {/* <canvas className="my-canvas"></canvas>
       <script src="../test.js" type="module"></script> */}
+      <canvas id="pngCanvas" className="fixed opacity-0" width="1000" height="1000"></canvas>
+      <div className="solid-bg"></div>
       <ThemeToggle />
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-top md:justify-center solid-bg">
+      <main className="flex-1 flex flex-col items-center justify-top md:justify-center">
+        <ShaderBackgroundShaderPark />
         {/* Scrolling Banner */}
         <div className="w-full bg-black dark:bg-white text-white dark:text-black py-2 scroll-container mb-6 inline-flex flex-nowrap max-w-3xl">
           {generateBannerSpans()}

@@ -35,10 +35,10 @@ body {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-/* .solid-bg{
+.solid-bg{
   background-color: var(--background);
   color: var(--foreground);
-} */
+}
 
 /* Add smooth transitions for all theme-related changes */
 *, *::before, *::after {
@@ -90,6 +90,7 @@ body {
 .text-gradient-mask {
   color: var(--foreground);
   background: var(--shader-canvas);
+  background-color: var(--foreground);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -104,15 +105,22 @@ body {
 .text-gradient-mask.active {
   color: transparent;
   background: var(--shader-canvas);
+  background-color: var(--foreground);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-clip: text;
 }
 
-.shader-background {
+.shader-background::before {
   opacity: 0;
   /* transition: none; */
+}
+
+.shader-background {
+  opacity: 0.0001;
+  opacity: 1;
+  transition: none;
 }
 
 .shader-background::after {

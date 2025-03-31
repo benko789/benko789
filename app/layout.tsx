@@ -4,6 +4,7 @@ import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { Source_Code_Pro } from "next/font/google";
+import { ShaderBackgroundShaderPark } from "../components/ShaderBackgroundShaderPark";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
